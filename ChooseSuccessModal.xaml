@@ -1,0 +1,27 @@
+﻿<Window x:Class="courser.ChooseSuccessModal"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:courser"
+        mc:Ignorable="d"
+								WindowState="Normal"
+								ResizeMode="NoResize"
+								WindowStartupLocation="CenterScreen"
+								WindowStyle="None"
+        Title="Success" Height="215.847" Width="303.023">
+				<Grid Margin="0,0,2,0">
+								<Label FontWeight="Bold" FontFamily="Lato" x:Name="label" Foreground="#333" Content="Success" Margin="117,57,0,0" HorizontalAlignment="Left" Width="108" Height="23" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" />
+
+								<Ellipse Fill="#85e9c5" Margin="-55,-50,0,0" Stroke="#85e9c5" HorizontalAlignment="Left" Width="167" Height="154" VerticalAlignment="Top">
+								</Ellipse>
+								<Image x:Name="outline_done_black_24dp_png" Margin="22,21,255,170" Source="outline_done_black_24dp.png" Stretch="Fill"/>
+								<Border BorderBrush="#85e9c5" BorderThickness="1" HorizontalAlignment="Left" Height="1" Margin="117,85,0,0" VerticalAlignment="Top" Width="100"/>
+								<Ellipse Margin="15,15,246,164" Stroke="#000"/>
+								<Button x:Name="button" FontFamily="Lato" Foreground="#6edcb5" FontWeight="Bold" Content="Ok"  HorizontalAlignment="Left" Margin="214,141,0,0" VerticalAlignment="Top" BorderThickness="0" Background="#fff" Width="75" Click="button_Click"/>
+								<Button x:Name="deleteBtn" Click="deleteBtn_Click" FontFamily="Lato" Foreground="#f69eaa" FontWeight="Bold" Content="Clear password"  HorizontalAlignment="Left" Margin="117,141,0,0" VerticalAlignment="Top" BorderThickness="0" Background="#fff" Width="92"/>
+								<TextBlock x:Name="messageBlock" FontFamily="Lato" Margin="117,91,10,0" Foreground="#3e3e3e"  TextWrapping="Wrap" Text="Enter password" VerticalAlignment="Top" Height="45"/>
+
+
+				</Grid>
+</Window>

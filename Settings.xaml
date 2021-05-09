@@ -1,0 +1,72 @@
+﻿<Window x:Class="courser.Settings"
+								xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+								xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+								xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+								xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+								xmlns:local="clr-namespace:courser"
+								mc:Ignorable="d"
+								WindowState="Normal"
+								ResizeMode="NoResize"
+								WindowStartupLocation="CenterScreen"
+								WindowStyle="None"
+								Title="Settings" Height="603" Width="493">
+				<Window.Resources>
+								<ControlTemplate x:Key="TextBoxBaseControlTemplate" TargetType="{x:Type TextBoxBase}">
+												<Border Background="{TemplateBinding Background}" 
+                x:Name="Bd" BorderBrush="#e4e6e8"
+                BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="5">
+																<ScrollViewer x:Name="PART_ContentHost"/>
+												</Border>
+												<ControlTemplate.Triggers>
+																<Trigger Property="IsEnabled" Value="False">
+																				<Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" TargetName="Bd"/>
+																				<Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
+																</Trigger>
+																<Trigger Property="Height" Value="Auto">
+																				<Setter Property="MinHeight" Value="20"/>
+																</Trigger>
+												</ControlTemplate.Triggers>
+								</ControlTemplate>
+				</Window.Resources>
+				<Grid>
+								<Label x:Name="label" FontFamily="Lato"  Foreground="#333" Content="Settings" FontWeight="Bold" Margin="33,21,0,0" HorizontalAlignment="Left" Width="133" Height="38" FontSize="20" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" />
+
+								<Border BorderBrush="#85ade9" BorderThickness="2" HorizontalAlignment="Left" Height="3" Margin="37,58,0,0" VerticalAlignment="Top" Width="110"/>
+
+
+								<Button x:Name="button" FontSize="16" FontFamily="Lato" Foreground="#85ade9" Content="Choose photo"  HorizontalAlignment="Left" Margin="34,202,0,0" VerticalAlignment="Top" BorderThickness="0" Background="#fff" Width="113" Click="button_Click"/>
+
+								<TextBox x:Name="lines" PreviewTextInput="NumberValidationTextBox" Template="{StaticResource TextBoxBaseControlTemplate}" TextAlignment="Center" Text="5" Margin="118,92,319,0" TextWrapping="Wrap" Height="24" VerticalAlignment="Top"/>
+								<TextBox x:Name="greeting" Template="{StaticResource TextBoxBaseControlTemplate}" HorizontalAlignment="Left" Height="23" Margin="118,144,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+
+
+
+								<Label x:Name="label1" Content="or choose template" FontFamily="Lato"  Foreground="#333" HorizontalAlignment="Left" Margin="34,235,0,0" VerticalAlignment="Top"/>
+								<Border x:Name="_4_jpg" CornerRadius="8" Margin="33,416,0,0" MouseLeftButtonDown="_4_jpg_MouseLeftButtonDown" Height="120" VerticalAlignment="Top" HorizontalAlignment="Left" Width="205">
+												<Border.Background>
+																<ImageBrush ImageSource="4.jpg" Stretch="Fill"/>
+												</Border.Background>
+								</Border>
+								<Border x:Name="_3_jpg" CornerRadius="8" Margin="266,416,0,0" MouseLeftButtonDown="_3_jpg_MouseLeftButtonDown" HorizontalAlignment="Left" Width="203" Height="120" VerticalAlignment="Top">
+												<Border.Background>
+																<ImageBrush ImageSource="3.jpg" Stretch="Fill"/>
+												</Border.Background>
+								</Border>
+								<Border x:Name="_2_jpg" CornerRadius="8" Margin="266,274,0,0" MouseLeftButtonDown="_2_jpg_MouseLeftButtonDown" HorizontalAlignment="Left" Width="203" Height="120" VerticalAlignment="Top">
+												<Border.Background>
+																<ImageBrush ImageSource="2.jpg" Stretch="Fill"/>
+												</Border.Background>
+								</Border>
+								<Border x:Name="_1_jpg" CornerRadius="8" Margin="34,274,0,0" MouseLeftButtonDown="_1_jpg_MouseLeftButtonDown" Height="120" VerticalAlignment="Top" HorizontalAlignment="Left" Width="204">
+												<Border.Background>
+																<ImageBrush ImageSource="1.jpg" Stretch="Fill"/>
+												</Border.Background>
+								</Border>
+
+								<Label x:Name="label1_Copy" Content="Lines count" FontFamily="Lato"  Foreground="#333" HorizontalAlignment="Left" Margin="34,92,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.484,-2.319"/>
+								<Label x:Name="label1_Copy1" Content="Greeting" FontFamily="Lato"  Foreground="#333" HorizontalAlignment="Left" Margin="34,144,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.484,-2.319"/>
+								<Button x:Name="save" FontSize="18" FontFamily="Lato" Foreground="#6edcb5" FontWeight="Bold" Content="Save" Margin="34,0,335,24" BorderThickness="0" Background="#fff" Click="save_Click" Height="25" VerticalAlignment="Bottom"/>
+								<Label x:Name="choosenPhotoLabel" Content="" FontFamily="Lato"  Foreground="#333" HorizontalAlignment="Left" Margin="164,199,0,0" VerticalAlignment="Top" Width="305"/>
+
+				</Grid>
+</Window>
